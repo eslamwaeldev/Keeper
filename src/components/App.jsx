@@ -6,7 +6,7 @@ import sampleNotes from "./notes";
 
 function App() {
   const [notes, setNotes] = useState([]);
-  const [addNote, setAddNote] = useState("false");
+  const [addNote, setAddNote] = useState(false);
   const [note, setNote] = useState({
     title: "",
     content: "",
@@ -14,29 +14,49 @@ function App() {
   return (
     <>
       <Header />
-      <div className="note">
-        <h1>
-          <input
-            value={note.title}
-            onChange={(event) => {
-              const title = event.target.value;
-              setNote({ title: title });
-            }}
-          />
-        </h1>
-        <p>
-          <input
-            value={note.content}
-            onChange={(event) => {
-              const content = event.target.value;
-              setNote({ content: content });
-            }}
-          />
-        </p>
+      <div className="flex-container">
+        <div className="insert-note">
+          <h1>
+            <input
+              placeholder="Title"
+              value={note.title}
+              onChange={(event) => {
+                const title = event.target.value;
+                // if (content === "") {
+                //   setAddNote(false);
+                // }
+                setNote({ title: title });
+                setAddNote(true);
+              }}
+            />
+          </h1>
+          <p>
+            <input
+              placeholder="Content"
+              value={note.content}
+              onChange={(event) => {
+                const content = event.target.value;
+                // if (content === "") {
+                //   setAddNote(false);
+                // }
+                setNote({ content: content });
+                setAddNote(true);
+              }}
+            />
+          </p>
+          {addNote && <button>Add</button>}
+        </div>
       </div>
-      {sampleNotes.map((note) => {
-        return <Note key={note.key} title={note.title} content={note.content} />;
-      })}
+      <div className="grid-container">
+        {sampleNotes.map((note) => {
+          return (
+            <div className="grid-items">
+              <Note key={note.key} title={note.title} content={note.content} />
+            </div>
+          );
+        })}
+      </div>
+
       <Footer />
     </>
   );
