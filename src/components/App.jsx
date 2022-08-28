@@ -42,9 +42,9 @@ function App() {
         </div>
       </div>
       <div className="grid-container">
-        {sampleNotes.map((note) => {
+        {sampleNotes.map((note, index) => {
           return (
-            <div className="grid-items">
+            <div key={index} className="grid-items">
               <Note key={note.key} title={note.title} content={note.content} />
             </div>
           );
