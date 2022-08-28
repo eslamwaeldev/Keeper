@@ -49,7 +49,8 @@ footer p {
   border-radius: 7px;
   box-shadow: 0 2px 5px #ccc;
   padding: 2rem;
-  width: 30rem;
+  width: 25rem;
+  height: 9rem;
   text-align: center;
 }
 .insert-note input {
@@ -61,7 +62,7 @@ footer p {
 }
 .insert-note h1 {
   font-size: 1.1em;
-  margin-bottom: 6px;
+  margin-bottom: 2rem;
 }
 .insert-note p {
   font-size: 1.1em;

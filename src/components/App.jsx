@@ -22,9 +22,6 @@ function App() {
               value={note.title}
               onChange={(event) => {
                 const title = event.target.value;
-                // if (content === "") {
-                //   setAddNote(false);
-                // }
                 setNote({ title: title });
                 setAddNote(true);
               }}
@@ -36,9 +33,6 @@ function App() {
               value={note.content}
               onChange={(event) => {
                 const content = event.target.value;
-                // if (content === "") {
-                //   setAddNote(false);
-                // }
                 setNote({ content: content });
                 setAddNote(true);
               }}
