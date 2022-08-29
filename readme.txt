@@ -11,4 +11,4 @@ npm install
 Run the application
 
 npm start
-[Keeper preview]("./Keeper.jpg")
+"./Keeper.jpg"
