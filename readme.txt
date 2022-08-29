@@ -2,7 +2,7 @@
 
 To run the app locally, use the following commands
 
-git clone https://github.com/eslamwaeldev/Keeper/new/master
+git clone https://github.com/eslamwaeldev/Keeper
 
 Install the dependencies
 
